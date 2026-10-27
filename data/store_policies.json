@@ -1,0 +1,17 @@
+[
+  {
+    "id": "returns_v1",
+    "topic": "returns",
+    "text": "Unused items may be returned within 30 days of delivery."
+  },
+  {
+    "id": "shipping_v1",
+    "topic": "shipping",
+    "text": "Standard shipping takes 3 to 5 business days."
+  },
+  {
+    "id": "cancellations_v1",
+    "topic": "cancellations",
+    "text": "Orders may be cancelled before they are dispatched."
+  }
+]
