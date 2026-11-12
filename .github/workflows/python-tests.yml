@@ -1,0 +1,40 @@
+
+name: PolicyGuard CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+
+      - name: Run automated regression tests
+        run: python -m pytest -q
+
+      - name: Generate evaluation report
+        run: python generate_report.py
+
+      - name: Validate JSON report
+        run: python -m json.tool reports/evaluation_report.json
+
+      - name: Upload evaluation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: policyguard-evaluation-report
+          path: reports/evaluation_report.json
