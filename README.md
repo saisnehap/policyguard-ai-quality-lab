@@ -162,16 +162,6 @@ Action validation currently uses simplified action labels.
 The current experiments do not establish general superiority
 over existing AI-agent evaluation frameworks.
 
-## Independence and Data Privacy
-
-This is an independent personal educational and research project.
-
-It uses fictional data and publicly available technologies.
-It does not use proprietary employer data, source code,
-internal processes, or confidential information.
-```
-
-**Why this matters:** Research and engineering projects must be reproducible. A recruiter or engineer should be able to read the README and understand your design without needing you to explain everything first.
 
 ## 2. Save and test your project
 
